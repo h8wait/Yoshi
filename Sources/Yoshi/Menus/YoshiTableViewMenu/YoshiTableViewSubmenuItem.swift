@@ -6,6 +6,8 @@
 //  Copyright © 2017 Prolific Interactive. All rights reserved.
 //
 
+import UIKit
+
 /// Internal struct that map the YoshiTableViewMenuItem to a YoshiGenericMenu.
 /// This menu is interannly used to support YoshiTableViewMenu.
 struct YoshiTableViewSubmenuItem: YoshiGenericMenu {

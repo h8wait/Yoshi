@@ -6,6 +6,8 @@
 //  Copyright © 2016 Prolific Interactive. All rights reserved.
 //
 
+import UIKit
+
 /**
  Protocol for defining a menu option for choosing a date.
  */
