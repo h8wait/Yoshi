@@ -1,12 +1,5 @@
 ![Yoshi](Images/Yoshi_logo.jpg)
 
-[![Travis build status](https://img.shields.io/travis/prolificinteractive/Yoshi.svg?style=flat-square)](https://travis-ci.org/prolificinteractive/Yoshi)
-[![Cocoapods Compatible](https://img.shields.io/cocoapods/v/Yoshi.svg?style=flat-square)](https://img.shields.io/cocoapods/v/Yoshi.svg)
-[![Platform](https://img.shields.io/cocoapods/p/Yoshi.svg?style=flat-square)](http://cocoadocs.org/docsets/Yoshi)
-[![Swift](https://img.shields.io/badge/Swift-5.0-orange.svg?style=flat-square)](http://cocoadocs.org/docsets/Yoshi)
-[![Docs](https://img.shields.io/cocoapods/metrics/doc-percent/Yoshi.svg?style=flat-square)](http://cocoadocs.org/docsets/Yoshi)
-[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
-
 ## Description
 
 A helpful companion for your iOS app.
@@ -26,50 +19,15 @@ Yoshi is a convenient wrapper around the UI code that is often needed for displa
 
 ## Installation
 
-### CocoaPods
-Yoshi is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your `Podfile`:
+### Swift Package Manager
 
-###### Swift 5.0
+Yoshi is available through [Swift Package Manager](https://swift.org/package-manager/). To install
+it, simply add the following line to your `Package.swift`:
 
-```ruby
-pod 'Yoshi'
-```
-
-###### Swift 4.0 and 4.2
-```ruby
-pod 'Yoshi', '3.0.0'
-```
-
-###### Swift 3.0
-
-```ruby
-pod 'Yoshi', '2.2.2'
-```
-
-###### Swift 2.3
-
-```ruby
-pod 'Yoshi', '1.1.1'
-```
-
-###### Subspec
-
-Starting from version 3, Yoshi provides implementations for some common debugging tasks and category them in its subspecs, including:
-
-* [QAKit](Yoshi/QAKit/README.md)
-
-To install, specify the subspec in your project's Podfile:
-
-```ruby
-pod 'Yoshi', :subspecs => ['QAKit']
-```
-
-### Carthage
-You can also add Yoshi to your project using [Carthage](https://github.com/Carthage/Carthage). Add the following to your `Cartfile`:
-
-```ruby
-github "prolificinteractive/Yoshi"
+```swift
+dependencies: [
+    .package(url: "https://github.com/prolificinteractive/Yoshi", .upToNextMajor(from: "3.1.0"))
+]
 ```
 
 ## Usage
