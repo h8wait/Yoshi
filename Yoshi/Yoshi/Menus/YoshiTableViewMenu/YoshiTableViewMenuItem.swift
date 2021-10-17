@@ -10,7 +10,7 @@
  A table view menu item.
  */
 @available(*, deprecated, message: " Consider using YoshiSingleSelectionMenu instead")
-public protocol YoshiTableViewMenuItem: class, YoshiGenericMenu {
+public protocol YoshiTableViewMenuItem: AnyObject, YoshiGenericMenu {
 
     /// The display text for the table view menu item.
     var name: String { get }
