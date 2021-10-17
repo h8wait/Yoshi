@@ -1,8 +1,0 @@
-source 'https://github.com/CocoaPods/Specs.git'
-platform :ios, '9.0'
-use_frameworks!
-
-target 'YoshiExample' do
-  pod "Instabug", '8.4.0'
-  pod "Yoshi", :path => "../", :subspecs => ['QAKit']
-end
