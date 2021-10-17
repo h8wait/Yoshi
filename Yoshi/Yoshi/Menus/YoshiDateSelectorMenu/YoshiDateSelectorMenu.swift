@@ -9,7 +9,7 @@
 /**
  Protocol for defining a menu option for choosing a date.
  */
-public protocol YoshiDateSelectorMenu: class, YoshiMenu {
+public protocol YoshiDateSelectorMenu: AnyObject, YoshiMenu {
 
     /// The selected date.
     var selectedDate: Date { get set }

@@ -20,7 +20,7 @@ public struct YoshiInvocation: OptionSet {
     }
 
     /// All invocations types.
-    public static let all = YoshiInvocation(rawValue: 0)
+    public static let all = YoshiInvocation([])
 
     /// Shake motion gesture invocation type.
     public static let shakeMotionGesture = YoshiInvocation(rawValue: 1 << 0)
