@@ -70,7 +70,12 @@ final class YoshiConfigurationManager {
 
         let window = UIWindow(frame: UIScreen.main.bounds)
         window.windowLevel = .normal
-
+        
+        if #available(iOS 13.0, *),
+           let scene = UIApplication.shared.connectedScenes.first as? UIWindowScene {
+            window.windowScene = scene
+        }
+        
         // Use a dummy view controller with clear background.
         // This way, we can make the actual view controller we want to present a form sheet on the iPad.
         let rootViewController = UIViewController()
@@ -130,10 +135,14 @@ final class YoshiConfigurationManager {
                                                                         completionBlock?()
                                                                 })
                 })
-
-            navigationController.modalPresentationStyle = .formSheet
+            
+            if #available(iOS 13.0, *) {
+                navigationController.isModalInPresentation = true
+            } else {
+                navigationController.modalPresentationStyle = .formSheet
+            }
             navigationController.setViewControllers([debugViewController], animated: false)
-
+            
             rootViewController.present(navigationController, animated: true, completion: nil)
             self.debugViewController = debugViewController
         }
